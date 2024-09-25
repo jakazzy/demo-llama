@@ -11,11 +11,11 @@ import {
   
   // Configure PostgreSQL client
   const pgClient = new Client({
-    user: process.env.PGUSER || 'postgres',
-    host: process.env.PGHOST || 'localhost',
-    database: process.env.PGDATABASE || 'postgres',
-    password: process.env.PGPASSWORD || 'example',
-    port: Number(process.env.PGPORT) || 5432,
+    user: process.env.PGUSER,
+    host: process.env.PGHOST,
+    database: process.env.PGDATABASE,
+    password: process.env.PGPASSWORD,
+    port: Number(process.env.PGPORT),
   });
   
   // Function to initialize and configure storage context

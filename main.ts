@@ -15,11 +15,11 @@ dotenv.config();
   
   // Configure PostgreSQL client
   const pgClient = new Client({
-    user: process.env.PGUSER || 'postgres',            // 'postgres' is the default user
-    host: process.env.PGHOST || 'localhost',           // You connected to 'localhost'
-    database: process.env.PGDATABASE || 'postgres',    // Default database is 'postgres'
-    password: process.env.PGPASSWORD || 'example',     // The password you set in the `docker-compose.yml` file
-    port: Number(process.env.PGPORT) || 5432,          // Default PostgreSQL port is 5432
+    user: process.env.PGUSER,
+    host: process.env.PGHOST,
+    database: process.env.PGDATABASE,
+    password: process.env.PGPASSWORD,
+    port: Number(process.env.PGPORT),
   });
   
   // Function to initialize and configure storage context
